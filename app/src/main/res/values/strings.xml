@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">TouchPgm</string>
+    <string name="Consigne_main">Objectif: Toucher l\'écran un maximum de fois en 5 secondes</string>
+    <string name="Button_go_text">C\'est partie !!!</string>
 </resources>
