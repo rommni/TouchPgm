@@ -27,6 +27,7 @@ public class Main4Activity extends AppCompatActivity {
                 finish();
                 startActivity(intent);
 
+
             }
         });
         Button home = findViewById(R.id.button6);

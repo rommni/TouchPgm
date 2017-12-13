@@ -51,8 +51,9 @@ public class Main3Activity extends AppCompatActivity {
                 Bundle b = new Bundle();
                 b.putString("score", score.getText().toString()); //Your id
                 intent.putExtras(b); //Put your id to your next Intent
-                startActivity(intent);
                 finish();
+                startActivity(intent);
+
             }
 
         }.start();
