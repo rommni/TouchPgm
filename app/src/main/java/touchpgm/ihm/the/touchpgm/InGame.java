@@ -4,26 +4,24 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Random;
-import java.text.DecimalFormat;
 
-public class Main3Activity extends AppCompatActivity {
+public class InGame extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main3);
+        setContentView(R.layout.activity_ingame);
         final Button test = findViewById(R.id.button2);
         final TextView score = findViewById(R.id.score);
         final TextView time = findViewById(R.id.time);
+        Bundle b = getIntent().getExtras();
+        final String value = b.getString("time");
         test.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
@@ -36,7 +34,7 @@ public class Main3Activity extends AppCompatActivity {
                                     }
                                 }
         );
-        new CountDownTimer(5000, 10) {
+        new CountDownTimer(Long.parseLong(value) * 1000, 10) {
 
             public void onTick(long millisUntilFinished) {
                 String value = String.valueOf((double)millisUntilFinished/1000);
@@ -47,9 +45,10 @@ public class Main3Activity extends AppCompatActivity {
 
             public void onFinish() {
                 time.setText("0");
-                Intent intent = new Intent(Main3Activity.this, Main4Activity.class);
+                Intent intent = new Intent(InGame.this, ScoreResult.class);
                 Bundle b = new Bundle();
-                b.putString("score", score.getText().toString()); //Your id
+                b.putString("score", score.getText().toString());
+                b.putString("time",value);//Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 finish();
                 startActivity(intent);
