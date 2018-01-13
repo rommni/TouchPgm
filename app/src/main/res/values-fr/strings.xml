@@ -4,6 +4,7 @@
     <string name="Button_go_text">C\'est parti !!!</string>
     <string name="title_activity_main3"></string>
     <string name="title_activity_main4"></string>
+    <string name="Consigne_seconde">(Choisisser un nombre entre %1$d and %2$d)</string>
     <string name="choosedtime">Temps de jeu :</string>
     <string name="unittime">Secondes</string>
 </resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="min_secondes">1</integer>
+    <integer name="max_secondes">500</integer>
+
+</resources>
