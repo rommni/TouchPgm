@@ -11,6 +11,7 @@
     <string name="again">Try Again</string>
     <string name="menu">Main menu</string>
     <string name="Bouton_jeu">Touch Me !!!</string>
+    <string name="scoreBySecond_text">Your score Touch Per Second (Tps)</string>
 
 </resources>
 

@@ -18,6 +18,11 @@ public class ScoreResult extends AppCompatActivity {
         final String time = b.getString("time");
         final TextView score = findViewById(R.id.score_result);
         score.setText(value);
+        final float timeValue = Float.parseFloat(time);
+        final float scoreValue = Float.parseFloat(value);
+        final String scoreBySecondValue = Float.toString(scoreValue/timeValue);
+        final TextView scoreBySecond = findViewById(R.id.scoreBySecond_result);
+        scoreBySecond.setText(scoreBySecondValue);
         Button restart = findViewById(R.id.button4);
         restart.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
