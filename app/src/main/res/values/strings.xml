@@ -4,9 +4,13 @@
     <string name="Button_go_text">Let\'s Go !!!</string>
     <string name="title_activity_main3"></string>
     <string name="title_activity_main4"></string>
+    <string name="score_text">Your Score:</string>
     <string name="Consigne_seconde">(Choose a number between %1$d and %2$d)</string>
     <string name="choosedtime">Game Duration :</string>
     <string name="unittime">Seconds</string>
+    <string name="again">Try Again</string>
+    <string name="menu">Main menu</string>
+    <string name="Bouton_jeu">Touch Me !!!</string>
 
 </resources>
 

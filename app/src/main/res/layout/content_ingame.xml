@@ -21,7 +21,7 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_weight="1">
 
             <Button
@@ -29,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimaryDark"
-                android:text="Touch Me"
+                android:text="@string/Bouton_jeu"
                 tools:layout_editor_absoluteX="45dp"
                 tools:layout_editor_absoluteY="120dp" />
         </RelativeLayout>
@@ -58,6 +58,7 @@
                 android:layout_weight="1"
                 android:text="0"
                 android:textAlignment="textEnd"
+                android:layout_gravity="end"
                 android:textColor="@android:color/white"
                 android:textSize="80sp"
                 android:visibility="visible"
