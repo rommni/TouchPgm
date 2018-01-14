@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="touchpgm.ihm.the.touchpgm.ScoreResult">
+    tools:context="touchpgm.ihm.the.touchpgm.fr.telecom_st_etienne.ihm.touchpgm.activity.ScoreResult">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Accueil">
+        <activity android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.Accueil">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -17,19 +17,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".InGame"
+            android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.InGame"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ScoreResult"
+            android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.ScoreResult"
             android:label="@string/title_activity_main4"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Waiting"
+            android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.Waiting"
             android:label="@string/title_activity_waiting"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".CalmDown"
+            android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.CalmDown"
             android:label="@string/title_activity_calm_down"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>

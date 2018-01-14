@@ -1,14 +1,12 @@
-package touchpgm.ihm.the.touchpgm;
+package fr.telecom_st_etienne.ihm.touchpgm.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.widget.ProgressBar;
+
+import fr.telecom_st_etienne.ihm.touchpgm.R;
 
 public class CalmDown extends AppCompatActivity {
 

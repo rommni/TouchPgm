@@ -13,6 +13,11 @@
     <string name="Bouton_jeu">Touche Moi !!!</string>
     <string name="scoreBySecond_text">Votre score par seconde:</string>
     <string name="getready">Soyez Prêt !</string>
+    <string name="tableau_nom">Nom</string>
+    <string name="tableau_tps">Score Par Secondes</string>
+    <string name="tableau_temps">Temps de jeu</string>
+    <string name="tableau_classement">Rang</string>
+    <string name="votre_score">Votre Score</string>
 
 </resources>
 

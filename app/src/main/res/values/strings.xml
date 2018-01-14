@@ -15,6 +15,11 @@
     <string name="title_activity_waiting"></string>
     <string name="getready">Get Ready !</string>
     <string name="title_activity_calm_down"></string>
+    <string name="tableau_nom">Name</string>
+    <string name="tableau_tps">TPS</string>
+    <string name="tableau_temps">Time Played</string>
+    <string name="tableau_classement">Rank</string>
+    <string name="votre_score">Your Score</string>
 
 </resources>
 

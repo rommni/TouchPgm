@@ -1,4 +1,4 @@
-package touchpgm.ihm.the.touchpgm.touchpgm.ihm.the.touchpgm.filter;
+package fr.telecom_st_etienne.ihm.touchpgm.filter;
 
 import android.text.InputFilter;
 import android.text.Spanned;

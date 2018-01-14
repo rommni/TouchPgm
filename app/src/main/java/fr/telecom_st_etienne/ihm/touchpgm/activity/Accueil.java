@@ -1,4 +1,4 @@
-package touchpgm.ihm.the.touchpgm;
+package fr.telecom_st_etienne.ihm.touchpgm.activity;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -9,7 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import touchpgm.ihm.the.touchpgm.touchpgm.ihm.the.touchpgm.filter.InputFilterMinMax;
+import fr.telecom_st_etienne.ihm.touchpgm.R;
+import fr.telecom_st_etienne.ihm.touchpgm.filter.InputFilterMinMax;
 
 public class Accueil extends AppCompatActivity {
 
