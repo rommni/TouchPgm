@@ -36,7 +36,7 @@ public class Accueil extends AppCompatActivity {
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(Accueil.this, InGame.class);
+                Intent intent = new Intent(Accueil.this, Waiting.class);
                 Bundle b = new Bundle();
                 b.putString("time", time.getText().toString()); //Your id
                 intent.putExtras(b); //Put your id to your next Intent

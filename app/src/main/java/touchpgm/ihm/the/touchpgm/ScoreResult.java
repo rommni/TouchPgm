@@ -26,7 +26,7 @@ public class ScoreResult extends AppCompatActivity {
         Button restart = findViewById(R.id.button4);
         restart.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(ScoreResult.this, InGame.class);
+                Intent intent = new Intent(ScoreResult.this, Waiting.class);
                 Bundle b = new Bundle();
                 b.putString("time",time);//Your id
                 intent.putExtras(b); //Put your id to your next Intent
@@ -39,9 +39,7 @@ public class ScoreResult extends AppCompatActivity {
         Button home = findViewById(R.id.button6);
         home.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-               // Intent intent = new Intent(ScoreResult.this, Accueil.class);
                 finish();
-                //startActivity(intent);
 
             }
         });

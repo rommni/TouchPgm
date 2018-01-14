@@ -45,7 +45,7 @@ public class InGame extends AppCompatActivity {
 
             public void onFinish() {
                 time.setText("0");
-                Intent intent = new Intent(InGame.this, ScoreResult.class);
+                Intent intent = new Intent(InGame.this, CalmDown.class);
                 Bundle b = new Bundle();
                 b.putString("score", score.getText().toString());
                 b.putString("time",value);//Your id

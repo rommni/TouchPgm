@@ -12,6 +12,9 @@
     <string name="menu">Main menu</string>
     <string name="Bouton_jeu">Touch Me !!!</string>
     <string name="scoreBySecond_text">Your score Touch Per Second (Tps)</string>
+    <string name="title_activity_waiting"></string>
+    <string name="getready">Get Ready !</string>
+    <string name="title_activity_calm_down"></string>
 
 </resources>
 

@@ -23,6 +23,14 @@
         <activity
             android:name=".ScoreResult"
             android:label="@string/title_activity_main4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Waiting"
+            android:label="@string/title_activity_waiting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CalmDown"
+            android:label="@string/title_activity_calm_down"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

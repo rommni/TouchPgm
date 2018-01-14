@@ -12,6 +12,8 @@
     <string name="menu">Menu Principal</string>
     <string name="Bouton_jeu">Touche Moi !!!</string>
     <string name="scoreBySecond_text">Votre score par seconde:</string>
+    <string name="getready">Soyez Prêt !</string>
+
 </resources>
 
 
