@@ -14,32 +14,34 @@ public class CalmDown extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calm_down);
-        Bundle b = getIntent().getExtras();
-        final String value = b.getString("score");
-        final String time = b.getString("time");
-        final ProgressBar progressBar = findViewById(R.id.progressBar);
+        if (savedInstanceState == null) {
+            Bundle b = getIntent().getExtras();
+            final String value = b.getString("score");
+            final String time = b.getString("time");
+            final ProgressBar progressBar = findViewById(R.id.progressBar);
 
-        new CountDownTimer(1000, 10) {
+            new CountDownTimer(1000, 10) {
 
-            public void onTick(long millisUntilFinished) {
-                long value = Math.round((double) millisUntilFinished / 100);
+                public void onTick(long millisUntilFinished) {
+                    long value = Math.round((double) millisUntilFinished / 100);
 
-                progressBar.setProgress((int) value);
-            }
+                    progressBar.setProgress((int) value);
+                }
 
-            public void onFinish() {
-                Intent intent = new Intent(CalmDown.this, ScoreResult.class);
-                Bundle b = new Bundle();
-                b.putString("time", time);
-                b.putString("score", value);
-                intent.putExtras(b);
-                finish();
-                startActivity(intent);
+                public void onFinish() {
+                    Intent intent = new Intent(CalmDown.this, ScoreResult.class);
+                    Bundle b = new Bundle();
+                    b.putString("time", time);
+                    b.putString("score", value);
+                    intent.putExtras(b);
+                    finish();
+                    startActivity(intent);
 
-            }
+                }
 
-        }.start();
+            }.start();
 
+        }
     }
 
 }

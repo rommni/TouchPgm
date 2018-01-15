@@ -19,44 +19,46 @@ public class InGame extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ingame);
-        final Button test = findViewById(R.id.button2);
-        final TextView score = findViewById(R.id.score);
-        final TextView time = findViewById(R.id.time);
-        Bundle b = getIntent().getExtras();
-        final String value = b.getString("time");
-        test.setOnClickListener(new View.OnClickListener() {
-                                    @Override
-                                    public void onClick(View view) {
-                                        Random rnd = new Random();
-                                        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-                                        test.setBackgroundColor(color);
-                                        int score_int;
-                                        score_int = Integer.parseInt(score.getText().toString()) + 1;
-                                        score.setText(String.valueOf(score_int));
+        if(savedInstanceState == null) {
+            final Button test = findViewById(R.id.button2);
+            final TextView score = findViewById(R.id.score);
+            final TextView time = findViewById(R.id.time);
+            Bundle b = getIntent().getExtras();
+            final String value = b.getString("time");
+            test.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View view) {
+                                            Random rnd = new Random();
+                                            int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+                                            test.setBackgroundColor(color);
+                                            int score_int;
+                                            score_int = Integer.parseInt(score.getText().toString()) + 1;
+                                            score.setText(String.valueOf(score_int));
+                                        }
                                     }
-                                }
-        );
-        new CountDownTimer(Long.parseLong(value) * 1000, 10) {
+            );
+            new CountDownTimer(Long.parseLong(value) * 1000, 10) {
 
-            public void onTick(long millisUntilFinished) {
-                String value = String.valueOf((double) millisUntilFinished / 1000);
+                public void onTick(long millisUntilFinished) {
+                    String value = String.valueOf((double) millisUntilFinished / 1000);
 
-                //value = String.format("%.2f", value);
-                time.setText(value);
-            }
+                    //value = String.format("%.2f", value);
+                    time.setText(value);
+                }
 
-            public void onFinish() {
-                time.setText("0");
-                Intent intent = new Intent(InGame.this, CalmDown.class);
-                Bundle b = new Bundle();
-                b.putString("score", score.getText().toString());
-                b.putString("time", value);//Your id
-                intent.putExtras(b); //Put your id to your next Intent
-                finish();
-                startActivity(intent);
+                public void onFinish() {
+                    time.setText("0");
+                    Intent intent = new Intent(InGame.this, CalmDown.class);
+                    Bundle b = new Bundle();
+                    b.putString("score", score.getText().toString());
+                    b.putString("time", value);//Your id
+                    intent.putExtras(b); //Put your id to your next Intent
+                    finish();
+                    startActivity(intent);
 
-            }
+                }
 
-        }.start();
+            }.start();
+        }
     }
 }

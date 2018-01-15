@@ -14,32 +14,34 @@ public class Waiting extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting);
-        final TextView msg = findViewById(R.id.waitingmsg);
-        msg.setText(R.string.getready);
-        final TextView time = findViewById(R.id.waitingtime);
-        Bundle b = getIntent().getExtras();
-        final String gametime = b.getString("time");
+        if (savedInstanceState == null) {
+            final TextView msg = findViewById(R.id.waitingmsg);
+            msg.setText(R.string.getready);
+            final TextView time = findViewById(R.id.waitingtime);
+            Bundle b = getIntent().getExtras();
+            final String gametime = b.getString("time");
 
 
-        new CountDownTimer(3000, 10) {
+            new CountDownTimer(3000, 10) {
 
-            public void onTick(long millisUntilFinished) {
-                String value = String.valueOf(Math.round((double) millisUntilFinished / 1000 + 0.8));
+                public void onTick(long millisUntilFinished) {
+                    String value = String.valueOf(Math.round((double) millisUntilFinished / 1000 + 0.8));
 
-                time.setText(value);
-            }
+                    time.setText(value);
+                }
 
-            public void onFinish() {
-                time.setText("0");
-                Intent intent = new Intent(Waiting.this, InGame.class);
-                Bundle b = new Bundle();
-                b.putString("time", gametime);
-                intent.putExtras(b);
-                finish();
-                startActivity(intent);
+                public void onFinish() {
+                    time.setText("0");
+                    Intent intent = new Intent(Waiting.this, InGame.class);
+                    Bundle b = new Bundle();
+                    b.putString("time", gametime);
+                    intent.putExtras(b);
+                    finish();
+                    startActivity(intent);
 
-            }
+                }
 
-        }.start();
+            }.start();
+        }
     }
 }

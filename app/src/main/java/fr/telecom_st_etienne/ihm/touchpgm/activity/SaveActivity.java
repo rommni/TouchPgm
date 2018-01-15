@@ -19,37 +19,38 @@ public class SaveActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_save);
-        final EditText name = findViewById(R.id.nameText);
-        Bundle b = getIntent().getExtras();
-        final float tps = b.getFloat("tps");
-        final int gameTime = b.getInt("gameTime");
+        if (savedInstanceState == null) {
+            final EditText name = findViewById(R.id.nameText);
+            Bundle b = getIntent().getExtras();
+            final float tps = b.getFloat("tps");
+            final int gameTime = b.getInt("gameTime");
 
 
-        final Button cancel = findViewById(R.id.buttonCancel);
-        cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                finish();
-            }
-        });
+            final Button cancel = findViewById(R.id.buttonCancel);
+            cancel.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    finish();
+                }
+            });
 
-        final Button save = findViewById(R.id.buttonSave);
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Save save = new Save();
-                save.setName(name.getText().toString());
-                save.setTps(tps);
-                save.setGameTime(gameTime);
-                AppDatabase db = Room.databaseBuilder(getApplicationContext(),
-                        AppDatabase.class, "save").allowMainThreadQueries().build();
-                SaveDao saveDao = db.saveDao();
-                saveDao.insert(save);
-                db.close();
-                finish();
+            final Button save = findViewById(R.id.buttonSave);
+            save.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Save save = new Save();
+                    save.setName(name.getText().toString());
+                    save.setTps(tps);
+                    save.setGameTime(gameTime);
+                    AppDatabase db = Room.databaseBuilder(getApplicationContext(),
+                            AppDatabase.class, "save").allowMainThreadQueries().build();
+                    SaveDao saveDao = db.saveDao();
+                    saveDao.insert(save);
+                    db.close();
+                    finish();
 
-            }
-        });
+                }
+            });
+        }
     }
-
 }
