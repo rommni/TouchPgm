@@ -21,14 +21,12 @@ public class Accueil extends AppCompatActivity {
         final int maxSeconde = res.getInteger(R.integer.max_secondes);
 
 
-
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
         final TextView time = findViewById(R.id.time);
         time.setText("5");
-        time.setFilters(new InputFilter[]{new InputFilterMinMax(minSeconde,maxSeconde)});
+        time.setFilters(new InputFilter[]{new InputFilterMinMax(minSeconde, maxSeconde)});
 
         final TextView consigneSeconde = findViewById(R.id.consigne_seconde);
         String consigneSecondeString = getString(R.string.Consigne_seconde, minSeconde, maxSeconde);

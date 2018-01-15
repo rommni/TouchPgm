@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
+
 import fr.telecom_st_etienne.ihm.touchpgm.R;
+
 public class CalmDown extends AppCompatActivity {
 
     @Override
@@ -20,14 +22,15 @@ public class CalmDown extends AppCompatActivity {
         new CountDownTimer(1000, 10) {
 
             public void onTick(long millisUntilFinished) {
-                long value = Math.round((double)millisUntilFinished/100);
+                long value = Math.round((double) millisUntilFinished / 100);
 
-                progressBar.setProgress((int)value);
+                progressBar.setProgress((int) value);
             }
+
             public void onFinish() {
-                Intent intent = new Intent(CalmDown.this,ScoreResult.class);
+                Intent intent = new Intent(CalmDown.this, ScoreResult.class);
                 Bundle b = new Bundle();
-                b.putString("time",time);
+                b.putString("time", time);
                 b.putString("score", value);
                 intent.putExtras(b);
                 finish();

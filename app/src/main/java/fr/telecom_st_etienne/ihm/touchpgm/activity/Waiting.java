@@ -5,7 +5,9 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
+
 import fr.telecom_st_etienne.ihm.touchpgm.R;
+
 public class Waiting extends AppCompatActivity {
 
     @Override
@@ -22,15 +24,16 @@ public class Waiting extends AppCompatActivity {
         new CountDownTimer(3000, 10) {
 
             public void onTick(long millisUntilFinished) {
-                String value = String.valueOf(Math.round((double)millisUntilFinished/1000 + 0.8));
+                String value = String.valueOf(Math.round((double) millisUntilFinished / 1000 + 0.8));
 
                 time.setText(value);
             }
+
             public void onFinish() {
                 time.setText("0");
                 Intent intent = new Intent(Waiting.this, InGame.class);
                 Bundle b = new Bundle();
-                b.putString("time",gametime);
+                b.putString("time", gametime);
                 intent.putExtras(b);
                 finish();
                 startActivity(intent);
@@ -39,4 +42,4 @@ public class Waiting extends AppCompatActivity {
 
         }.start();
     }
-    }
+}

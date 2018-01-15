@@ -10,7 +10,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Random;
+
 import fr.telecom_st_etienne.ihm.touchpgm.R;
+
 public class InGame extends AppCompatActivity {
 
     @Override
@@ -37,7 +39,7 @@ public class InGame extends AppCompatActivity {
         new CountDownTimer(Long.parseLong(value) * 1000, 10) {
 
             public void onTick(long millisUntilFinished) {
-                String value = String.valueOf((double)millisUntilFinished/1000);
+                String value = String.valueOf((double) millisUntilFinished / 1000);
 
                 //value = String.format("%.2f", value);
                 time.setText(value);
@@ -48,7 +50,7 @@ public class InGame extends AppCompatActivity {
                 Intent intent = new Intent(InGame.this, CalmDown.class);
                 Bundle b = new Bundle();
                 b.putString("score", score.getText().toString());
-                b.putString("time",value);//Your id
+                b.putString("time", value);//Your id
                 intent.putExtras(b); //Put your id to your next Intent
                 finish();
                 startActivity(intent);

@@ -12,6 +12,7 @@ public interface SaveDao {
 
     @Query("SELECT * FROM save ORDER BY tps DESC")
     List<Save> getAllOrderByTps();
+
     @Query("SELECT tps FROM save ORDER BY tps ASC")
     List<Float> getTpsOrderByTps();
 

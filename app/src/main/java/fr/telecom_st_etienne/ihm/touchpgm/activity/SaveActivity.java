@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import fr.telecom_st_etienne.ihm.touchpgm.R;
 import fr.telecom_st_etienne.ihm.touchpgm.save.AppDatabase;
@@ -44,7 +43,7 @@ public class SaveActivity extends AppCompatActivity {
                 save.setGameTime(gameTime);
                 AppDatabase db = Room.databaseBuilder(getApplicationContext(),
                         AppDatabase.class, "save").allowMainThreadQueries().build();
-                SaveDao saveDao= db.saveDao();
+                SaveDao saveDao = db.saveDao();
                 saveDao.insert(save);
                 db.close();
                 finish();

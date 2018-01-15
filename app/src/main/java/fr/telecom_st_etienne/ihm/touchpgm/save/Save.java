@@ -1,14 +1,16 @@
 package fr.telecom_st_etienne.ihm.touchpgm.save;
 
 
-import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
 @Entity
-public class Save implements Comparable<Save>{
+public class Save implements Comparable<Save> {
     @PrimaryKey(autoGenerate = true)
     private int id;
+    private String name;
+    private float tps;
+    private int gameTime;
 
     public int getId() {
         return id;
@@ -18,12 +20,8 @@ public class Save implements Comparable<Save>{
         this.id = id;
     }
 
-    private String name;
-    private float tps;
-    private int gameTime;
-
     @Override
-    public int compareTo(Save save){
+    public int compareTo(Save save) {
         return Float.compare(this.tps, save.getTps());
     }
 
