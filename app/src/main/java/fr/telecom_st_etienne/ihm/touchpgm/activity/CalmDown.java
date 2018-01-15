@@ -10,6 +10,8 @@ import fr.telecom_st_etienne.ihm.touchpgm.R;
 
 public class CalmDown extends AppCompatActivity {
 
+    CountDownTimer countdowntimer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,7 +22,7 @@ public class CalmDown extends AppCompatActivity {
             final String time = b.getString("time");
             final ProgressBar progressBar = findViewById(R.id.progressBar);
 
-            new CountDownTimer(1000, 10) {
+            countdowntimer = new CountDownTimer(1000, 10) {
 
                 public void onTick(long millisUntilFinished) {
                     long value = Math.round((double) millisUntilFinished / 100);
@@ -44,4 +46,11 @@ public class CalmDown extends AppCompatActivity {
         }
     }
 
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        countdowntimer.cancel();
+        this.finish();
+    }
 }

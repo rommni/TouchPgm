@@ -14,10 +14,12 @@ import java.util.Random;
 import fr.telecom_st_etienne.ihm.touchpgm.R;
 
 public class InGame extends AppCompatActivity {
+    CountDownTimer countdowntimer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_ingame);
         if(savedInstanceState == null) {
             final Button test = findViewById(R.id.button2);
@@ -37,7 +39,7 @@ public class InGame extends AppCompatActivity {
                                         }
                                     }
             );
-            new CountDownTimer(Long.parseLong(value) * 1000, 10) {
+            countdowntimer = new CountDownTimer(Long.parseLong(value) * 1000, 10) {
 
                 public void onTick(long millisUntilFinished) {
                     String value = String.valueOf((double) millisUntilFinished / 1000);
@@ -60,5 +62,12 @@ public class InGame extends AppCompatActivity {
 
             }.start();
         }
+
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        countdowntimer.cancel();
+        this.finish();
     }
 }

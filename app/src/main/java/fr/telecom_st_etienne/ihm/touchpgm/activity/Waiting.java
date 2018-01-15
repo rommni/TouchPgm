@@ -10,23 +10,23 @@ import fr.telecom_st_etienne.ihm.touchpgm.R;
 
 public class Waiting extends AppCompatActivity {
 
+    CountDownTimer countdowntimer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiting);
+        final TextView time = findViewById(R.id.waitingtime);
         if (savedInstanceState == null) {
-            final TextView msg = findViewById(R.id.waitingmsg);
-            msg.setText(R.string.getready);
-            final TextView time = findViewById(R.id.waitingtime);
+
             Bundle b = getIntent().getExtras();
             final String gametime = b.getString("time");
 
 
-            new CountDownTimer(3000, 10) {
+            countdowntimer = new CountDownTimer(3000, 10) {
 
                 public void onTick(long millisUntilFinished) {
-                    String value = String.valueOf(Math.round((double) millisUntilFinished / 1000 + 0.8));
-
+                    String value = String.valueOf(Math.round((double) millisUntilFinished / 1000));
                     time.setText(value);
                 }
 
@@ -43,5 +43,11 @@ public class Waiting extends AppCompatActivity {
 
             }.start();
         }
+    }
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        countdowntimer.cancel();
+        this.finish();
     }
 }
