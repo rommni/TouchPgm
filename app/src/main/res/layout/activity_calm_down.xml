@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="touchpgm.ihm.the.touchpgm.fr.telecom_st_etienne.ihm.touchpgm.activity.CalmDown">
+    tools:context="fr.telecom_st_etienne.ihm.touchpgm.activity.CalmDown">
 
     <include layout="@layout/content_calm_down" />
 

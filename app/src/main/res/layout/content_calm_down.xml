@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="touchpgm.ihm.the.touchpgm.fr.telecom_st_etienne.ihm.touchpgm.activity.CalmDown"
+    tools:context="fr.telecom_st_etienne.ihm.touchpgm.activity.CalmDown"
     tools:showIn="@layout/activity_calm_down">
 
 

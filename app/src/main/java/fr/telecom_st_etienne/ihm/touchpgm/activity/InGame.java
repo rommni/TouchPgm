@@ -10,9 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.Random;
-
 import fr.telecom_st_etienne.ihm.touchpgm.R;
-
 public class InGame extends AppCompatActivity {
 
     @Override

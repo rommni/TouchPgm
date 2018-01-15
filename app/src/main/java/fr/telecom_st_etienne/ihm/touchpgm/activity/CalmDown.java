@@ -5,9 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
-
 import fr.telecom_st_etienne.ihm.touchpgm.R;
-
 public class CalmDown extends AppCompatActivity {
 
     @Override

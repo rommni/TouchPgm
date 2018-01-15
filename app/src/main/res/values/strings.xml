@@ -20,6 +20,8 @@
     <string name="tableau_temps">Time Played</string>
     <string name="tableau_classement">Rank</string>
     <string name="votre_score">Your Score</string>
+    <string name="save">Save</string>
+    <string name="your_name">Your Name :</string>
 
 </resources>
 

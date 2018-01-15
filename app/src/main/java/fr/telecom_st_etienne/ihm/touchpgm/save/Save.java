@@ -1,12 +1,13 @@
 package fr.telecom_st_etienne.ihm.touchpgm.save;
 
 
+import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
 @Entity
 public class Save implements Comparable<Save>{
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
     public int getId() {

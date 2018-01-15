@@ -54,40 +54,15 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent">
-
-        <Button
-            android:id="@+id/button4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/again"
-            tools:layout_editor_absoluteY="218dp" />
-
-        <Button
-            android:id="@+id/button6"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/menu"
-            tools:layout_editor_absoluteX="122dp"
-            tools:layout_editor_absoluteY="162dp" />
-
-    </LinearLayout>
-
     <TableLayout
         android:id="@+id/tab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
         android:gravity="center_vertical|center_horizontal|fill_horizontal|center|fill|clip_horizontal"
+        android:orientation="vertical"
         android:scrollIndicators="bottom|right"
         android:scrollbarAlwaysDrawHorizontalTrack="false"
         android:scrollbarAlwaysDrawVerticalTrack="false"
@@ -95,7 +70,7 @@
         android:stretchColumns="1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="243dp">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
 
         <TableRow
             android:id="@+id/tab_head"
@@ -146,22 +121,26 @@
             <TextView
                 android:id="@+id/tab_rang_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_nom_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_tps_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_temps_1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
         </TableRow>
 
         <TableRow
@@ -171,22 +150,26 @@
             <TextView
                 android:id="@+id/tab_rang_2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_nom_2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_tps_2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_temps_2"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
         </TableRow>
 
@@ -197,24 +180,61 @@
             <TextView
                 android:id="@+id/tab_rang_3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_nom_3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/tab_temps_3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
 
             <TextView
                 android:id="@+id/tab_tps_3"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/tab_temps_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center" />
         </TableRow>
 
     </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/again"
+            tools:layout_editor_absoluteY="218dp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu"
+            tools:layout_editor_absoluteX="122dp"
+            tools:layout_editor_absoluteY="162dp" />
+
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
