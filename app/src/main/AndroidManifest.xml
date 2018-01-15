@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.Accueil">
+        <activity android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.Accueil"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -24,19 +25,23 @@
         <activity
             android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.ScoreResult"
             android:label="@string/title_activity_main4"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize"/>
         <activity
             android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.Waiting"
             android:label="@string/title_activity_waiting"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize"/>
         <activity
             android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.CalmDown"
             android:label="@string/title_activity_calm_down"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize"/>
         <activity
             android:name="fr.telecom_st_etienne.ihm.touchpgm.activity.SaveActivity"
             android:label=""
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:configChanges="orientation|screenSize"/>
     </application>
 
 </manifest>
